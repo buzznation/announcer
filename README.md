@@ -27,7 +27,7 @@ To install and set up this Discord bot, follow these steps:
    ```
 3. **Install Dependencies**: Install the required dependencies by running the following command:
    ```
-   npm install
+   npm install discord.js canvas
    ```
 4. **Configure the Bot**: Update the `config.json` file with your bot token, guild ID, channel ID, allowed roles, default color, template images, and any other necessary configurations.
 5. **Run the Bot**: Start the bot by running the main script file using Node.js:
