@@ -25,7 +25,7 @@ To install and set up this Discord bot, follow these steps:
    ```
    cd <repository_directory>
    ```
-3. **Install Dependencies (if needed)**: Install the required dependencies by running the following command:
+3. **Install Dependencies**: Install the required dependencies by running the following command:
    ```
    npm install discord.js canvas
    ```
@@ -41,58 +41,58 @@ To install and set up this Discord bot, follow these steps:
 With these steps completed, your Discord bot should be up and running, ready to serve your server's needs!
 
 
-## Discord Bot Usage Guide
+## Usage Guide for Announcer Bot
 
-### Overview
-This guide provides step-by-step instructions on how to effectively use the Discord bot in your server. The bot is designed to send messages with specified text onto images, allowing for customizable and visually appealing messages.
-
-### Installation
-1. **Invite the Bot**: Invite the bot to your Discord server using its client ID and the necessary permissions.
-2. **Configuration**: Configure the `config.json` file with the required parameters such as the bot token, guild ID, channel ID, allowed roles, default color, and template images.
-
-### Command Syntax
-To interact with the bot, use the following command syntax:
-
-```
-/<command_name> --image <image_number> --title <message_title> --description <message_description> --color <message_color>
-```
-
-- `<command_name>`: The name of the slash command configured in the bot.
-- `<image_number>`: Choose an image template from the available options (1, 2, 3).
-- `<message_title>`: The title of the message to be displayed on the image.
-- `<message_description>`: The description text of the message (optional).
-- `<message_color>`: The color of the text (optional).
+This guide provides instructions on how to use Announcer Bot, a Discord bot that allows you to send customized messages with titles, descriptions, and various visual elements.
 
 ### Usage
-1. **Interacting with the Bot**:
-   - Type the slash command in any text channel where the bot is present.
-   - Replace the placeholders with your desired values.
-   - Press Enter to send the command.
+1. **Run the Bot**
+   - Start the bot by running `node bot.js` in your terminal.
+2. **Adding the Bot to Your Server**
+   - Go to the Discord Developer Portal and invite the bot to your server using the OAuth2 URL generated for your application.
+3. **Setting Up Slash Command**
+   - Before using the bot, you need to set up a slash command in your Discord server.
+   - Use the Discord Developer Portal or any bot management dashboard to create a new slash command with the name specified in the `config.json` file.
+4. **Using Slash Command**
+   - After setting up the slash command, you can use it to interact with the bot.
+   - Use the command followed by options to send a customized message.
+     - `image`: Choose an image (1, 2, 3).
+     - `title`: Title of the message (required).
+     - `description`: Description of the message.
+     - `titlecolor`: Title color in hex format (e.g., #RRGGBB).
+     - `descriptioncolor`: Description color in hex format (e.g., #RRGGBB).
+     - `linecolor`: Line color in hex format (e.g., #RRGGBB).
+5. **Example Command**
+   - `/announce image=1 title=Welcome description=Hello, this is a test message! titlecolor=#FF0000`
 
-2. **Viewing Results**:
-   - The bot will process the command and generate an image with the specified text.
-   - The generated image will be sent to the designated channel for viewing by you and other users in the server.
+### Additional Notes
+- Ensure that the bot has the necessary permissions to read messages, send messages, and manage roles in the specified channel.
+- Make sure that the images referenced in the `config.json` file are accessible and valid URLs.
+- Customize the bot's behavior by modifying the code according to your requirements.
 
-### Troubleshooting
-- If you encounter any issues or errors while using the bot, check the console logs for error messages.
-- Console logs can provide insights into what went wrong and how to address it.
+### Support
+For any issues or questions, please open an issue on the [GitHub repository issues](#) page.
 
-### Customization
-- Customize the bot further by modifying the code to add additional functionalities or tweaking existing features to better suit your server's needs.
+Thank you for using Announcer Bot!
 
----
-
-By following these instructions, you can effectively utilize the Discord bot to send messages with text onto images in your server.
 
 ## Configuration
 The bot requires a `config.json` file with the following structure:
 ```json
 {
-  "token": "YOUR_DISCORD_BOT_TOKEN",
-  "guildId": "YOUR_DISCORD_GUILD_ID",
-  "commandName": "YOUR_SLASH_COMMAND_NAME",
-  "allowedRoles": ["ROLE_ID_1", "ROLE_ID_2"],
-  "defaultColor": "DEFAULT_COLOR",
-  "channelId": "CHANNEL_ID",
-  "templateImages": ["IMAGE_URL_1", "IMAGE_URL_2", "IMAGE_URL_3"]
+  "token": "YOUR_DISCORD_BOT_TOKEN_HERE",
+  "guildId": "YOUR_GUILD_ID_HERE",
+  "channelId": "YOUR_CHANNEL_ID_HERE",
+  "commandName": "YOUR_COMMAND_NAME_HERE",
+  "defaultHexColor": "#FFFFFF",
+  "allowedRoles": [
+      "ROLE_ID_1",
+      "ROLE_ID_2"
+  ],
+  "templateImages": [
+      "IMAGE_URL_1",
+      "IMAGE_URL_2",
+      "IMAGE_URL_3"
+  ]
 }
+
