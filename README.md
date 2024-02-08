@@ -80,19 +80,19 @@ Thank you for using Announcer Bot!
 The bot requires a `config.json` file with the following structure:
 ```json
 {
-  "token": "YOUR_DISCORD_BOT_TOKEN_HERE",
-  "guildId": "YOUR_GUILD_ID_HERE",
-  "channelId": "YOUR_CHANNEL_ID_HERE",
-  "commandName": "YOUR_COMMAND_NAME_HERE",
-  "defaultHexColor": "#FFFFFF",
-  "allowedRoles": [
-      "ROLE_ID_1",
-      "ROLE_ID_2"
-  ],
-  "templateImages": [
-      "IMAGE_URL_1",
-      "IMAGE_URL_2",
-      "IMAGE_URL_3"
-  ]
+    "token": "YOUR_DISCORD_BOT_TOKEN",
+    "guildId": "YOUR_GUILD_ID",
+    "channelId": "YOUR_CHANNEL_ID",
+    "commandName": "sendmessage",
+    "allowedRoles": ["ROLE_ID_1", "ROLE_ID_2", "..."],
+    "defaultHexColor": "#FFFFFF",
+    "templateImages": [
+        "image1.jpg",
+        "image2.jpg",
+        "image3.jpg",
+        "image4.jpg",
+        "image5.jpg"
+    ]
 }
+
 
