@@ -25,7 +25,7 @@ To install and set up this Discord bot, follow these steps:
    ```
    cd <repository_directory>
    ```
-3. **Install Dependencies**: Install the required dependencies by running the following command:
+3. **Install Dependencies (if needed)**: Install the required dependencies by running the following command:
    ```
    npm install discord.js canvas
    ```
