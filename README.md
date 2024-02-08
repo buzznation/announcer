@@ -81,18 +81,17 @@ The bot requires a `config.json` file with the following structure:
 ```json
 {
     "token": "YOUR_DISCORD_BOT_TOKEN",
-    "guildId": "YOUR_GUILD_ID",
-    "channelId": "YOUR_CHANNEL_ID",
-    "commandName": "sendmessage",
-    "allowedRoles": ["ROLE_ID_1", "ROLE_ID_2", "..."],
-    "defaultHexColor": "#FFFFFF",
+    "guildId": "YOUR_DISCORD_GUILD_ID",
+    "channelId": "YOUR_DISCORD_CHANNEL_ID",
+    "allowedRoles": ["ROLE_ID_1", "ROLE_ID_2"],    
+    "commandName": "YOUR_SLASH_COMMAND_NAME",
+    "defaultHexColor": "#FFFFFF",    
     "templateImages": [
-        "image1.jpg",
-        "image2.jpg",
-        "image3.jpg",
-        "image4.jpg",
-        "image5.jpg"
+      "URL_TO_IMAGE_1",
+      "URL_TO_IMAGE_2",
+      "URL_TO_IMAGE_3",
+      "URL_TO_IMAGE_4",
+      "URL_TO_IMAGE_5"
     ]
 }
-
 
