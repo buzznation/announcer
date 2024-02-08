@@ -75,11 +75,15 @@ client.on('interactionCreate', async interaction => {
                 }
             }
             ctx.fillText(line, canvas.width / 2, y);
+            
+            // Calculate the vertical position for the dividing line (at the bottom of the title text)
+            const lineY = y + 60 - 18; // Move up by half a line height
 
             // Draw a line to separate the title and description
+            const lineLengthReduction = canvas.width * 0.1; // 20% reduction on both sides
             ctx.beginPath();
-            ctx.moveTo(200, y + 60); // Adjusted y coordinate
-            ctx.lineTo(1300, y + 60); // Adjusted y coordinate
+            ctx.moveTo(200 + lineLengthReduction, lineY); // Adjusted starting x coordinate
+            ctx.lineTo(1300 - lineLengthReduction, lineY); // Adjusted ending x coordinate
             ctx.strokeStyle = lineColor; // User-specified line color
             ctx.lineWidth = 3;
             ctx.stroke();
@@ -128,7 +132,7 @@ async function registerSlashCommands() {
             new SlashCommandBuilder()
                 .setName(config.commandName)
                 .setDescription('Send a message')
-                .addIntegerOption(option => option.setName('image').setDescription('Choose an image (1, 2, 3)').setRequired(true))
+                .addIntegerOption(option => option.setName('image').setDescription('Choose an image (1, 2, 3, 4, 5)').setRequired(true))
                 .addStringOption(option => option.setName('title').setDescription('Title of the message').setRequired(true))
                 .addStringOption(option => option.setName('description').setDescription('Description of the message'))
                 .addStringOption(option => option.setName('titlecolor').setDescription('Title color in hex format (e.g., #RRGGBB)'))
